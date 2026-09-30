@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy — Grocery Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Grocery Expense Tracker</a>
+    <nav aria-label="Legal pages">
+      <a href="privacy.html" aria-current="page">Privacy policy</a>
+      <a href="delete-account.html">Account &amp; data deletion</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Privacy policy</h1>
+    <p class="muted">Effective 30 September 2026 · Applies to the Grocery Expense Tracker Android app (<code>com.sajjad.receiptreader</code>).</p>
+    <p>Grocery Expense Tracker is operated by its developer, Sajjad Shumaly. Contact <a href="mailto:deepmwizard@gmail.com">deepmwizard@gmail.com</a> for privacy questions or requests. This policy explains the app's current behavior; we will update it if its data practices change.</p>
+
+    <h2>What the app handles</h2>
+    <ul>
+      <li><strong>Google sign-in:</strong> Google provides an identity token and basic account details such as name and email. The app sends the token to our HTTPS service to verify sign-in and obtain a temporary app session. Your name and email are displayed and stored in the app on your phone. The service uses your Google account identifier to authenticate requests and derive a pseudonymous account key; it does not maintain a profile database.</li>
+      <li><strong>Receipt photos:</strong> You may take a photo with the camera or select one already on your phone. A temporary copy remains on your phone while you review it. If you discard it, that copy is deleted. If you tap “Save receipt,” the app keeps a JPEG in its private phone storage and sends a resized copy for receipt analysis. Re-analysis sends the saved receipt again and may include top and bottom detail crops.</li>
+      <li><strong>Purchase details:</strong> Analysis returns store names, dates, items, prices and totals. These results, your edits, reports and in-app workbooks are stored on your phone, separated by signed-in Google account. You can export an Excel file to a location you choose.</li>
+      <li><strong>Usage limits:</strong> To enforce daily analysis limits, our service stores a pseudonymous, cryptographically derived account identifier, the day, a usage count and an update time in Google Cloud Firestore. It also stores a global daily count. This is not a receipt or purchase database. Daily counts reset for limit calculations, but the records do not currently expire automatically.</li>
+    </ul>
+
+    <h2>Where receipt analysis happens</h2>
+    <p>After you save a receipt, its resized image is sent over HTTPS to our Google Cloud Run service in the EU. The service sends the image and an extraction request to <strong>DeepSeek</strong>, the current external AI provider, and returns extracted details to the app. A receipt may contain a store or address, purchase date, transaction identifiers, payment-method text and other personal information. Do not save a receipt containing information you do not want to submit for analysis.</p>
+    <p>External AI processing may take place outside the European Economic Area, including in China. Our service processes images and responses for the request; its code does not store a receipt-image or extracted-item database. DeepSeek may handle submitted inputs under its applicable service terms and retention practices, which we do not control. Deleting a local receipt does not guarantee deletion of data already processed by DeepSeek. <a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html">Read DeepSeek's published privacy information</a>.</p>
+
+    <h2>Purpose, sharing and security</h2>
+    <p>We use account information to provide sign-in and keep accounts separate, receipt images to extract purchase details, and pseudonymous usage records to enforce service limits. We do not run in-app advertising, advertising analytics or interaction-history tracking, and we do not sell receipt or account data.</p>
+    <p>Data leaves the phone only for the services described above or when you choose an external Excel export location. Google supplies identity services and cloud hosting; DeepSeek processes receipt images for extraction. The app uses Android private storage, requests camera access only when needed, disables Android app backup, and uses HTTPS for the hosted service. No internet service or device storage can be guaranteed completely secure.</p>
+
+    <h2>Storage, retention and your choices</h2>
+    <p>Saved receipt photos and extracted data stay in the app on your phone until you delete a receipt, delete that signed-in account's local data, or uninstall the app. Removing a receipt also removes its linked items. Deleting account data in the app removes that account's local receipts, items and in-app workbooks; data for other accounts on the same phone remains. Excel files you exported outside the app must be deleted separately. The app's Google session may remain valid for up to seven days unless replaced or expired.</p>
+    <p>Our service does not retain a receipt database. Its pseudonymous Firestore usage records currently have no automatic expiry and are <strong>not removed by the app's current in-app delete action</strong>. Contact us using the <a href="delete-account.html">account and data deletion page</a> to request review and removal of data we can identify and control. DeepSeek may retain submitted data under its own practices; we can help you route a provider-related deletion request but cannot promise that deleting local data removes provider-held copies.</p>
+    <p>You may decline the app's first-run agreement and exit without starting Google sign-in or a receipt upload. You can also view and delete individual receipts in the app. For privacy questions or applicable access, correction or deletion requests, contact <a href="mailto:deepmwizard@gmail.com">deepmwizard@gmail.com</a>. We may ask for reasonable verification before acting on a request; please do not email receipt photos, passwords or payment details.</p>
+
+    <h2>Children and changes</h2>
+    <p>This app is intended for adults and is not designed for children. If the app's data handling changes, we will update this policy and its effective date. Material changes may also require an updated in-app disclosure or consent.</p>
+  </main>
+  <footer>Grocery Expense Tracker · <a href="delete-account.html">Account &amp; data deletion</a></footer>
+</body>
+</html>
