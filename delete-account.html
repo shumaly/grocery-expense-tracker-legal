@@ -29,10 +29,10 @@
     <h2>Request deletion without the app</h2>
     <p class="callout"><a href="mailto:deepmwizard@gmail.com?subject=Grocery%20Expense%20Tracker%20account%20deletion%20request">Email deepmwizard@gmail.com to request account and data deletion</a>. Use the subject “Grocery Expense Tracker account deletion request.”</p>
     <p>Please identify the Google account used with the app, but <strong>do not send passwords, identity documents, receipt photos or payment details</strong>. We will respond with any verification or next steps needed and review data held by our service that can be matched to your account. A deletion request does not require reinstalling the app.</p>
-    <p>Receipt photos and purchase details are kept in the app on your phone, not in our server database. We cannot remotely erase files that remain on a device we do not control; uninstalling the app removes its private local files from that device. Our service keeps a pseudonymous usage-limit record in Firestore; the current in-app delete action does not automatically remove it. We will review a verified request to remove server-held records we can identify and control.</p>
+    <p>Your receipt archive and purchase history are kept on your phone. Version 1.1 and later also use temporary cloud images, analysis results and job metadata to complete queued analysis. The in-app account deletion action cancels that account's temporary jobs and removes their cloud images and results; job metadata expires automatically. We cannot remotely erase files on a device we do not control; uninstalling the app removes its private local files from that device. Our service keeps a separate pseudonymous usage-limit record in Firestore; the in-app delete action does not automatically remove it or reset the daily allowance. We will review a verified request to remove server-held records we can identify and control.</p>
     <p>Images previously sent to the external AI provider may remain under that provider's terms. Tell us if your request also concerns previously submitted receipt images; we can explain the available provider request path, but cannot promise remote deletion by the provider. See our <a href="privacy.html">privacy policy</a> for details.</p>
     <p>For help with any of these steps, email <a href="mailto:deepmwizard@gmail.com">deepmwizard@gmail.com</a>.</p>
   </main>
-  <footer>Grocery Expense Tracker · Last updated 30 September 2026</footer>
+  <footer>Grocery Expense Tracker · Last updated 2 October 2026</footer>
 </body>
 </html>
