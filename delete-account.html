@@ -25,6 +25,7 @@
       <li>Confirm the action. This removes that account's saved receipt photos, extracted items and in-app workbooks from this phone and signs you out. Other accounts' data on the same phone is not removed.</li>
     </ol>
     <p>Deleting an individual receipt from the Receipts tab removes its linked items. Uninstalling the app removes its private local data from that phone. Excel files exported outside the app are separate files and must be deleted where you saved them.</p>
+    <p>From version 1.2, local deletion works without waiting for the network. If cloud cleanup is pending, reopen the app online so it can retry; reconnect the same Google account if its service session has expired. The phone retains only an account-scoped cleanup request and service credential until confirmation, not the deleted receipts. New analysis for that account waits for cleanup to finish. If you uninstall before that happens, cloud expiry and retention rules still apply.</p>
 
     <h2>Request deletion without the app</h2>
     <p class="callout"><a href="mailto:deepmwizard@gmail.com?subject=Grocery%20Expense%20Tracker%20account%20deletion%20request">Email deepmwizard@gmail.com to request account and data deletion</a>. Use the subject “Grocery Expense Tracker account deletion request.”</p>
