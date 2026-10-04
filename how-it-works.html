@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How it works — Grocery Expense Tracker</title>
+  <meta name="description" content="Learn how to save and review receipts, choose your main currency, convert foreign prices and export purchase information.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Grocery Expense Tracker</a>
+    <nav aria-label="Site pages">
+      <a href="how-it-works.html" aria-current="page">How it works</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="delete-account.html">Account &amp; data deletion</a>
+    </nav>
+  </header>
+  <main>
+    <h1>How it works</h1>
+    <p class="muted">Currency features described here apply to version 1.4 and later. An older installed version may look different.</p>
+
+    <h2>Save a receipt and review your purchases</h2>
+    <ol>
+      <li>Read the in-app agreement and sign in with your Google account. Receipt analysis uses an online service; your archive is kept privately on this phone.</li>
+      <li>For a new, empty account archive, choose your <strong>main currency</strong>. This is the currency used for calendars, reports and spending totals.</li>
+      <li>Take a photo or choose one from your phone. Zoom in to check it, then save or discard it. Saving starts receipt analysis and adds the photo to <strong>Receipts</strong>.</li>
+      <li>Open <strong>Items</strong> to review purchases grouped by receipt. Review flags identify information that needs checking; automated extraction can still make mistakes without flagging them.</li>
+      <li>Use the receipt's edit button to correct its store, date, currency, items, prices or printed total. Check the relevant review boxes only after verifying those values, then confirm and save.</li>
+    </ol>
+    <p>Each purchase stays linked to its receipt image. Removing a receipt removes its linked items. Re-analyzing a receipt replaces its previous extracted information, including manual edits; editing is unavailable while the receipt is updating.</p>
+
+    <h2>Your main currency is fixed for this archive</h2>
+    <p>Choose carefully: there is no setting to change the main currency after choosing it. Existing archives that already contain receipt photos remain in <strong>EUR</strong>, preserving their previous prices and totals.</p>
+    <p>The choice belongs to that Google account's private archive <strong>on this phone</strong>. Signing out does not erase it, and switching back to the account restores its archive and currency. Another account has a separate archive. Receipts and currency settings are not cloud-synced or restored automatically on another phone. Deleting the account's local data or uninstalling the app removes the local archive and its currency setting; this is not a way to convert or preserve an existing archive.</p>
+
+    <h2>Receipts in another currency</h2>
+    <p>When the receipt's currency is clearly identifiable, the app keeps the original prices. If it differs from your main currency, it requests a reference exchange rate from <a href="https://frankfurter.dev/">Frankfurter</a>.</p>
+    <ul>
+      <li><strong>Purchase-date rate first:</strong> the app uses a rate for the purchase date when available. If it cannot obtain one, or the date is missing, invalid or in the future, it tries the latest available rate.</li>
+      <li><strong>Rate information:</strong> the receipt shows the rate and its date, and identifies a latest-rate fallback.</li>
+      <li><strong>Stable saved totals:</strong> the selected rate is saved with that receipt. Later exchange-rate movements do not automatically change its totals.</li>
+      <li><strong>Corrections:</strong> changing the receipt's currency or date requires a new rate lookup. Editing its prices uses the saved rate when its currency and date are unchanged.</li>
+    </ul>
+    <p class="callout"><strong>Illustrative example, not a current rate:</strong> with EUR as your main currency, a receipt for 10.00 USD and a rate of 1 USD = 0.85 EUR displays both <strong>8.50 EUR</strong> and <strong>10.00 USD</strong> in Items. Its contribution to reports and calendar totals is 8.50 EUR.</p>
+    <p>Reference rates are estimates, not your bank's actual conversion rate or fees. Converted values are rounded to the main currency's standard decimal precision; small rounding differences between converted line items and a converted receipt total can occur.</p>
+
+    <h2>When currency needs your attention</h2>
+    <p>If the receipt's currency is missing or ambiguous, the app displays <strong>“Currency not defined”</strong> and uses your main currency provisionally. These assumed amounts are included in spending totals until corrected. Open Edit receipt, select the actual currency, verify the original printed prices, and tick the currency confirmation box before saving. Changing another field does not automatically clear the currency flag.</p>
+    <p>If a known foreign currency cannot be converted because a rate or connection is unavailable, the original information remains saved. That receipt is marked <strong>“Conversion pending”</strong> and is excluded from main-currency totals and reports until conversion succeeds. Use <strong>Retry conversion</strong> when online; the app also makes throttled retry attempts when reopened. A rate-only retry does not re-analyze the photo or use your receipt-analysis allowance. Availability and currency coverage are not guaranteed.</p>
+
+    <h2>Reports, date filters and Excel</h2>
+    <p>Select a day or date range in the calendar to review that period. With no selection, Items and Reports use all available purchase data. Reports show only main-currency amounts, not a mixture of currencies. The monthly spending prediction uses the month displayed in the Reports calendar, independently of your selected date range; it is an estimate, not a guaranteed outcome.</p>
+    <p>In Items, you can export all purchases or the selected date range as an Excel workbook and choose its destination on your phone. The workbook identifies the main currency. Original-price and exchange-rate columns are added only if that export contains foreign-currency receipts; same-currency rows leave those original-price cells empty. Pending-conversion main amounts stay blank and do not enter running totals. Currency status identifies provisional or pending values.</p>
+
+    <h2>What leaves your phone</h2>
+    <p>Saving or re-analyzing a receipt sends its image for online analysis. For exchange rates, the phone sends Frankfurter only currency codes and, when available, a purchase date—not a receipt photo, amount, store or account identifier. Its network and hosting providers receive ordinary connection information, such as your IP address. The app has no advertising analytics or interaction-history tracking.</p>
+    <p>Read the <a href="privacy.html">privacy policy</a> for service providers, temporary cloud storage, retention and your choices. See <a href="delete-account.html">account and data deletion</a> for removal instructions. For help, email <a href="mailto:deepmwizard@gmail.com">deepmwizard@gmail.com</a>; please do not email passwords, receipt images or payment details.</p>
+  </main>
+  <footer>Grocery Expense Tracker · Last updated 4 October 2026</footer>
+</body>
+</html>
